@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cpe.dope" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:icon="@drawable/shooter_icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo" >
+        <activity
+            android:name=".HomescreenActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NewSessionActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_new_session"
+            android:parentActivityName=".HomescreenActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cpe.dope.HomescreenActivity" />
+        </activity>
+        <activity
+            android:name=".ShotActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_shot"
+            android:windowSoftInputMode="stateHidden" >
+            android:parentActivityName=".HomescreenActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cpe.dope.HomescreenActivity" />
+        </activity>
+        <activity
+            android:name=".LoadSessionActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_load_session"
+            android:parentActivityName=".HomescreenActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cpe.dope.HomescreenActivity" />
+        </activity>
+        <activity
+            android:name=".LoadShotActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_load_shot"
+            android:parentActivityName=".LoadSessionActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cpe.dope.LoadSessionActivity" />
+        </activity>
+        <activity
+            android:name=".OptionsActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_options"
+            android:parentActivityName=".HomescreenActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cpe.dope.HomescreenActivity" />
+        </activity>
+    </application>
+
+</manifest>

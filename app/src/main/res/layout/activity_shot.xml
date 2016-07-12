@@ -1,0 +1,267 @@
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bkg_black_metal">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:tag="tab0"
+                android:id="@+id/txtView"
+                android:text="Data"
+                android:textSize="16dp"
+                android:textColor="@android:color/background_light"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                />
+            <TextView
+                android:tag="tab1"
+                android:text="Shot Call"
+                android:textSize="16dp"
+                android:textColor="@android:color/background_light"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                />
+            <TextView
+                android:tag="tab2"
+                android:text="Shot Hit"
+                android:textSize="16dp"
+                android:textColor="@android:color/background_light"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                />
+            <TextView
+                android:tag="tab3"
+                android:text="Wind"
+                android:textSize="16dp"
+                android:textColor="@android:color/background_light"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                />
+
+        </TabWidget>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/scrollView" >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/textView_temperature"
+                            android:id="@+id/textView"
+                            android:textSize="16dp"
+                            android:textColor="@android:color/background_light"
+                            android:singleLine="true" />
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/edtTxt_temperature"
+                            android:layout_marginLeft="10dp"
+                            android:inputType="numberDecimal"
+                            android:textSize="16dp"
+                            android:textColor="@android:color/background_light"
+                            android:hint="@string/editText_hint_temperature"
+                            android:onClick="onButtonClick" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/textView_location"
+                            android:id="@+id/textView2"
+                            android:singleLine="true"
+                            android:textSize="16dp"
+                            android:textColor="@android:color/background_light" />
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/edtTxt_location"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:hint="@string/editText_hint_location"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="16dp"
+                            android:onClick="onButtonClick" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/textView_dateTime"
+                            android:id="@+id/textView3"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="16dp"
+                            android:textIsSelectable="false" />
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/edtTxt_timeDate"
+                            android:editable="false"
+                            android:textSize="16dp"
+                            android:textColor="@android:color/background_light"
+                            android:onClick="onButtonClick" />
+                    </TableRow>
+
+                    <TableLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TableRow
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/txtView_distance"
+                                android:id="@+id/textView4"
+                                android:textColor="@android:color/background_light"
+                                android:textSize="16dp"
+                                android:singleLine="true"
+                                android:gravity="left"/>
+
+                            <EditText
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/edtTxt_distance"
+                                android:inputType="number"
+                                android:hint="@string/editText_hint_distance"
+                                android:onClick="onButtonClick"/>
+
+                            <ImageButton
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/imgbtn"
+                                android:src="@android:drawable/arrow_down_float"
+                                android:onClick="onButtonClick"/>
+
+                            <ImageButton
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/imgbtn2"
+                                android:src="@android:drawable/arrow_up_float"
+                                android:onClick="onButtonClick" />
+                        </TableRow>
+                    </TableLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView2"
+                android:layout_gravity="center" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txtView_windspeed"
+                            android:id="@+id/textView5"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="16dp"
+                            android:singleLine="true"
+                            android:gravity="left"/>
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:id="@+id/edtTxt_windSpeed"
+                            android:inputType="number"
+                            android:hint="@string/editText_hint_windspeed"
+                            android:onClick="onButtonClick"/>
+
+                        <ImageButton
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imgbtn3"
+                            android:src="@android:drawable/arrow_down_float"
+                            android:onClick="onButtonClick"/>
+
+                        <ImageButton
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imgbtn4"
+                            android:src="@android:drawable/arrow_up_float"
+                            android:onClick="onButtonClick" />
+                        </TableRow>
+                </TableLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView3"
+                        android:layout_centerInParent="true" />
+                </RelativeLayout>
+
+                </LinearLayout>
+
+
+
+        </FrameLayout>
+    </LinearLayout>
+</TabHost>

@@ -1,0 +1,93 @@
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:weightSum="1"
+    android:background="@drawable/bkg_black_metal">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentBottom="false"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/homescreen_title"
+            android:id="@+id/textView"
+            android:layout_gravity="center"
+            android:textSize="42dp"
+            android:textColor="@android:color/background_light"
+            android:singleLine="true"
+            android:typeface="normal"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/homescreen_subtitle"
+            android:id="@+id/textView2"
+            android:layout_gravity="center"
+            android:singleLine="false"
+            android:textSize="18dp"
+            android:textColor="@android:color/background_light"
+            android:textStyle="italic" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/space" />
+
+        <ImageView
+            android:layout_width="188dp"
+            android:layout_height="184dp"
+            android:id="@+id/imgVw_icon"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shooter_icon" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Session"
+            android:id="@+id/btn_newSession"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/background_light"
+            android:enabled="true"
+            android:onClick="onButtonClick" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Load Session"
+            android:id="@+id/btn_loadSession"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/background_light"
+            android:onClick="onButtonClick" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_options"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/background_light"
+            android:text="Options"
+            android:onClick="onButtonClick" />
+    </LinearLayout>
+
+</RelativeLayout>

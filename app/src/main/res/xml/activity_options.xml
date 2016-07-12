@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Units">
+        <SwitchPreference
+            android:title="Temperature Unit"
+            android:defaultValue="true"
+            android:summary="Celsius/Fahrenheit"
+            android:switchTextOff="@string/temperatureUnit_fahrenheit"
+            android:switchTextOn="@string/temperatureUnit_celsius"
+            android:key="tempUnitPref" />
+
+        <SwitchPreference
+            android:title="Distance Unit"
+            android:defaultValue="true"
+            android:summary="Meters/Yards"
+            android:switchTextOff="@string/switch_distanceUnit_yards"
+            android:switchTextOn="@string/switch_distanceUnit_meters"
+            android:key="distUnitPref" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Customizations">
+        <Preference
+            android:key="imagePath"
+            android:title="Target Image"
+            android:persistent="true"
+            />
+
+        <Preference
+            android:key="distanceIncrement"
+            android:title="Distance +/- Value"
+            android:persistent="true"
+            />
+
+    </PreferenceCategory>
+</PreferenceScreen>
